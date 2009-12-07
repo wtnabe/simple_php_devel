@@ -1,0 +1,29 @@
+
+= simple_php_devel
+
+
+== Description
+
+
+== Installation
+
+=== Archive Installation
+
+	rake install
+
+=== Gem Installation
+
+	gem install simple_php_devel
+
+
+== Features/Problems
+
+
+== Synopsis
+
+
+== Copyright
+
+Author::    wtnabe <wtnabe@gmail.com>
+Copyright:: Copyright (c) 2009 wtnabe
+License::   Two-claused BSD
