@@ -126,7 +126,8 @@ EOD
                 pac %>
  */
 /** <%= classize( name ) %> */
-require_once( '<%= lib_file( name ) %>' );
+require_once( '<%= File.join( File.basename( lib_dir ),
+                              lib_file( name ) ) %>' );
 
 /**
  * @since   <%= date %>
@@ -146,7 +147,7 @@ if ( realpath( $_SERVER['SCRIPT_FILENAME'] ) == __FILE__ ) {
   $test =& new Test_<%= classize( name ) %>();
   if ( $_SERVER['SERVER_ADDR'] ) {
     $reporter =& new HtmlReporter();
-    $reporter->paintHeader( 'Test of <%= lib_file( name ) %>' );
+    $reporter->paintHeader( 'Test of <%= "#{File.basename( lib_dir )}/#{lib_file( name )}" %>' );
   } else {
     $reporter =& new TextReporter();
   }
